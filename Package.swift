@@ -15,7 +15,8 @@ let package = Package(
         .target(
             name: "RxFlow",
             dependencies: [
-                "RxSwift",
+                .product(name: "RxSwift", package: "RxSwift"),
+                .product(name: "RxRelay", package: "RxSwift"),
                 .product(name: "RxCocoa", package: "RxSwift")
             ],
             path: "RxFlow"
